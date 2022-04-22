@@ -8,16 +8,43 @@ using UnitySystem;
 
 var cameraTransform;
 var targetTransform;
+var gameObjectPosition;
+
 var right = GetStaticMember("Vector3", "right");
 
 var rotateFunction = GetMethod("Transform", "Rotate", "Vector3", "float");
 
+
+var getDown = true;
+var getUp = false;
+
 function Start()
 {
     targetTransform = TransformTarget.transform;
+    gameObjectPosition = targetTransform.position;
 }
 
 function Update()
 {
     rotateFunction(targetTransform, right, 360.0 * UnityDeltaTime());
+    if(gameObjectPosition.y > 0.9 && getDown)
+    {
+        gameObjectPosition.y -= 0.1 * UnityDeltaTime();
+        if(gameObjectPosition.y < 0.9)
+        {
+            getDown = false;
+            getUp = true;
+        }
+    }
+    
+    if(gameObjectPosition.y < 2.1 && getUp)
+    {
+        gameObjectPosition.y += 0.1 * UnityDeltaTime();
+        if(gameObjectPosition.y > 2.1)
+        {
+            getDown = true;
+            getUp = false;
+        }
+    }
+    targetTransform.position = gameObjectPosition;
 }

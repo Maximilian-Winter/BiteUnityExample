@@ -1,8 +1,0 @@
-module UnitySystem;
-import System;
-using System;
-
-import Interop;
-using Interop;
-
-extern callable function UnityDeltaTime ();
