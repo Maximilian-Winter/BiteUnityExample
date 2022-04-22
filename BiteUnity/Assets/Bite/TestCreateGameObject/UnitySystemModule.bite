@@ -1,0 +1,35 @@
+module UnitySystem;
+import System;
+using System;
+
+
+var GameObjectClass = new CSharpInterface();
+
+GameObjectClass.Type = "GameObject";
+
+GameObjectClass.ReturnClass = true;
+
+var GameObject = CSharpInterfaceCall(GameObjectClass);
+
+var Vector3Class = new CSharpInterface();
+
+Vector3Class.Type = "Vector3";
+
+Vector3Class.ReturnClass = true;
+
+var Vector3 = CSharpInterfaceCall(Vector3Class);
+
+var Vector3Instantiator = new CSharpInterface();
+
+Vector3Instantiator.Type = "Vector3";
+
+Vector3Instantiator.ConstructorArguments[0] = 0.0;
+Vector3Instantiator.ConstructorArgumentsTypes[0] = "float";
+Vector3Instantiator.ConstructorArguments[1] = 0.0;
+Vector3Instantiator.ConstructorArgumentsTypes[1] = "float";
+Vector3Instantiator.ConstructorArguments[2] = 0.0;
+Vector3Instantiator.ConstructorArgumentsTypes[2] = "float";
+
+extern callable function UnityDeltaTime ();
+extern callable function UnityInstantiate ();
+

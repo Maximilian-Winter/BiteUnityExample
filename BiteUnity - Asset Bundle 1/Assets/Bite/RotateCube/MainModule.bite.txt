@@ -1,0 +1,23 @@
+module MainModule;
+
+import System;
+using System;
+
+import UnitySystem;
+using UnitySystem;
+
+var cameraTransform;
+var targetTransform;
+var right = GetStaticMember("Vector3", "right");
+
+var rotateFunction = GetMethod("Transform", "Rotate", "Vector3", "float");
+
+function Start()
+{
+    targetTransform = TransformTarget.transform;
+}
+
+function Update()
+{
+    rotateFunction(targetTransform, right, 360.0 * UnityDeltaTime());
+}

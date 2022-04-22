@@ -1,0 +1,28 @@
+module CameraMovementModule;
+
+import System;
+using System;
+
+import UnitySystem;
+using UnitySystem;
+
+var cameraTransform;
+var targetTransform;
+var right = GetStaticMember("Vector3", "right");
+
+var lookAtFunction = GetMethod("Transform", "LookAt", "Transform");
+
+var translateFunction = GetMethod("Transform", "Translate", "Vector3");
+
+function Start()
+{
+    cameraTransform = Camera.transform;
+    targetTransform = Target.transform;
+}
+
+function Update()
+{
+    lookAtFunction(cameraTransform, targetTransform);
+    right.x = 10.0 * UnityDeltaTime();
+    translateFunction(cameraTransform, right);
+}

@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 601045615
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d8e775b8168b08047a42ab6bde1ab2f7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bite/MoveCameraScript/UnitySystemModule.bite.txt
+- Assets/Bite/MoveCameraScript/CamerMovementModule.bite.txt
+Dependencies: []

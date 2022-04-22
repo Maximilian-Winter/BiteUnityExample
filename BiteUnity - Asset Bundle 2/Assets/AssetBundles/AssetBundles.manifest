@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+CRC: 1759438752
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: mod_scene
+      Dependencies: {}
+    Info_1:
+      Name: mod_code
+      Dependencies: {}
+    Info_2:
+      Name: mod_code_camera
+      Dependencies: {}
