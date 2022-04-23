@@ -10,19 +10,10 @@ var cameraTransform;
 var targetTransform;
 var gameObjectPosition;
 
-var right = GetStaticMember("Vector3", "right");
-
-var rotateFunction = GetMethod("Transform", "Rotate", "Vector3", "float");
-
-var getComponentFunction = GetMethod("GameObject", "GetComponent");
-
-var getComponentMeshRenderer = GetGenericMethod(getComponentFunction, "MeshRenderer");
-
-var randomColor = GetStaticMethod("Random", "ColorHSV");
 
 var getDown = true;
 var getUp = false;
-var meshRenderer = getComponentMeshRenderer(TransformTarget);
+var meshRenderer = GameObject.GetComponentMeshRenderer(TransformTarget);
 
 var timer = 0.0;
 function Start()
@@ -35,10 +26,10 @@ function Start()
 function Update()
 {
     gameObjectPosition = targetTransform.position;
-    rotateFunction(targetTransform, right, 360.0 * UnityDeltaTime());
+    Transform.Rotate(targetTransform, Random.insideUnitSphere, 360.0 * UnityDeltaTime());
     if(gameObjectPosition.y > 0.9 && getDown)
     {
-        gameObjectPosition.y -= 0.1 * UnityDeltaTime();
+        gameObjectPosition.y -= 0.5 * UnityDeltaTime();
         if(gameObjectPosition.y < 0.9)
         {
             getDown = false;
@@ -48,7 +39,7 @@ function Update()
     
     if(gameObjectPosition.y < 2.1 && getUp)
     {
-        gameObjectPosition.y += 0.1 * UnityDeltaTime();
+        gameObjectPosition.y += 0.5 * UnityDeltaTime();
         if(gameObjectPosition.y > 2.1)
         {
             getDown = true;
@@ -59,7 +50,7 @@ function Update()
     
     if(timer > 1.5)
     {
-        meshRenderer.material.color = randomColor();
+        meshRenderer.material.color = Random.RandomColor();
         timer = 0.0;
     }
     else

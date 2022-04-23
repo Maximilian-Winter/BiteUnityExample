@@ -31,6 +31,7 @@ public class BiteExampleLoader : MonoBehaviour
 
     public void StartExample()
     {
+        UnitySystemConsoleRedirector.StopRedirect();
         m_ExampleBiteVm.InitVm();
         m_ExampleBiteVm.SynchronizationContext = SynchronizationContext.Current;
 

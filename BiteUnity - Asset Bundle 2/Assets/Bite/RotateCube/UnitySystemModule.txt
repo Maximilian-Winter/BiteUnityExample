@@ -6,3 +6,37 @@ import Interop;
 using Interop;
 
 extern callable function UnityDeltaTime ();
+
+class UnityVector3
+{
+    var right = GetStaticMember("Vector3", "right");
+    var left = GetStaticMember("Vector3", "left");
+    var up = GetStaticMember("Vector3", "up");
+    var down = GetStaticMember("Vector3", "down");
+    var back = GetStaticMember("Vector3", "back");
+    var forward = GetStaticMember("Vector3", "forward");
+    var Lerp = GetStaticMethod("Vector3", "Lerp", "Vector3", "Vector3", "float");
+}
+
+class UnityTransform
+{
+    var Rotate = GetMethod("Transform", "Rotate", "Vector3", "float");
+    var LookAt = GetMethod("Transform", "LookAt", "Transform");
+}
+
+class UnityGameObject
+{
+    var GetComponent = GetMethod("GameObject", "GetComponent");
+    var GetComponentMeshRenderer = GetGenericMethod(GetComponent, "MeshRenderer");
+}
+
+class UnityRandom
+{
+    var RandomColor = GetStaticMethod("Random", "ColorHSV");
+    var insideUnitSphere = GetStaticMember("Random", "insideUnitSphere");
+}
+
+var Vector3 = new UnityVector3();
+var Transform = new UnityTransform();
+var GameObject = new UnityGameObject();
+var Random = new UnityRandom();

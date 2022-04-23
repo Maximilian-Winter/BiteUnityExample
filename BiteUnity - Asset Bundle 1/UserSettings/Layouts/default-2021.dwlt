@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 16
+  controlID: 30
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 31
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 68
+  controlID: 32
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -401,7 +401,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fabdffff48beffff4abeffffdebfffff2cc0ffff2ec0ffffe0c1ffff2ec2ffff30c2fffffcc6ffff4ac7ffff4cc7ffff80ceffffc0ceffff72cfffffa8d3ffffe8d3ffffead3ffffead7ffff2ad8ffffdcd8ffff32fbffff
+      m_ExpandedIDs: daf3ffff26f4ffffd4f4ffff66f8ffffb4f8ffff62f9ffff32fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -771,22 +771,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Bite/MoveCameraScript
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Bite/MoveCameraScript
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Game Dev 2022\BiteUnity - Asset Bundle 1
+  m_LastProjectPath: C:\Game Dev 2022\BiteUnityExample\BiteUnity - Asset Bundle 1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 06510000
-    m_LastClickedID: 20742
-    m_ExpandedIDs: 00000000f8500000fa500000fc50000000ca9a3bffffff7f
+    m_SelectedIDs: 4a540000
+    m_LastClickedID: 21578
+    m_ExpandedIDs: 000000004a5400004c5400004e54000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -814,7 +814,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f8500000fa500000fc500000
+    m_ExpandedIDs: 000000004a5400004c5400004e540000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
