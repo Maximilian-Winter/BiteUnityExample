@@ -63,6 +63,8 @@ public class BiteExampleLoader : MonoBehaviour
         m_ExampleBiteProgram = compiler.Compile(fileContent);
 
         m_ExampleBiteProgram.TypeRegistry.RegisterType<Vector3>();
+        m_ExampleBiteProgram.TypeRegistry.RegisterType<Input>();
+        m_ExampleBiteProgram.TypeRegistry.RegisterType<KeyCode>();
         m_ExampleBiteProgram.TypeRegistry.RegisterType<GameObject>();
         m_ExampleBiteProgram.TypeRegistry.RegisterType<Transform>();
         m_ExampleBiteProgram.TypeRegistry.RegisterType<MeshRenderer>();

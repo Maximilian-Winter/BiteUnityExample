@@ -48,7 +48,7 @@ function Update()
     }
     targetTransform.position = gameObjectPosition;
     
-    if(timer > 1.5)
+    if(Input.GetKey(Input.KeyCode.Space))
     {
         meshRenderer.material.color = Random.RandomColor();
         timer = 0.0;

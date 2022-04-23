@@ -36,7 +36,17 @@ class UnityRandom
     var insideUnitSphere = GetStaticMember("Random", "insideUnitSphere");
 }
 
+class UnityInput
+{
+    var GetKeyDown = GetStaticMethod("Input", "GetKeyDown", "KeyCode");
+    var GetButtonDown = GetStaticMethod("Input", "GetKeyDown", "string");
+    var GetKey = GetStaticMethod("Input", "GetKey", "KeyCode");
+    var GetButton = GetStaticMethod("Input", "GetKey", "string");
+    var KeyCode = GetStaticClass("KeyCode");
+}
+
 var Vector3 = new UnityVector3();
 var Transform = new UnityTransform();
 var GameObject = new UnityGameObject();
 var Random = new UnityRandom();
+var Input = new UnityInput();
