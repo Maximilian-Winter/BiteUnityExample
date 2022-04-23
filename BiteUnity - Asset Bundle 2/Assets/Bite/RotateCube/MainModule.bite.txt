@@ -14,18 +14,27 @@ var right = GetStaticMember("Vector3", "right");
 
 var rotateFunction = GetMethod("Transform", "Rotate", "Vector3", "float");
 
+var getComponentFunction = GetMethod("GameObject", "GetComponent");
+
+var getComponentMeshRenderer = GetGenericMethod(getComponentFunction, "MeshRenderer");
+
+var randomColor = GetStaticMethod("Random", "ColorHSV");
 
 var getDown = true;
 var getUp = false;
+var meshRenderer = getComponentMeshRenderer(TransformTarget);
 
+var timer = 0.0;
 function Start()
 {
     targetTransform = TransformTarget.transform;
     gameObjectPosition = targetTransform.position;
 }
 
+
 function Update()
 {
+    gameObjectPosition = targetTransform.position;
     rotateFunction(targetTransform, right, 360.0 * UnityDeltaTime());
     if(gameObjectPosition.y > 0.9 && getDown)
     {
@@ -47,4 +56,14 @@ function Update()
         }
     }
     targetTransform.position = gameObjectPosition;
+    
+    if(timer > 1.5)
+    {
+        meshRenderer.material.color = randomColor();
+        timer = 0.0;
+    }
+    else
+    {
+        timer += UnityDeltaTime();
+    }
 }

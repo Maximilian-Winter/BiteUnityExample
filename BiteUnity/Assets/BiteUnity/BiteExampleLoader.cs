@@ -10,6 +10,7 @@ using Bite.Runtime.Memory;
 using BiteUnity;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BiteExampleLoader : MonoBehaviour
 {
@@ -63,6 +64,8 @@ public class BiteExampleLoader : MonoBehaviour
         m_ExampleBiteProgram.TypeRegistry.RegisterType<Vector3>();
         m_ExampleBiteProgram.TypeRegistry.RegisterType<GameObject>();
         m_ExampleBiteProgram.TypeRegistry.RegisterType<Transform>();
+        m_ExampleBiteProgram.TypeRegistry.RegisterType<MeshRenderer>();
+        m_ExampleBiteProgram.TypeRegistry.RegisterType(typeof(Random), "Random");
         m_ExampleBiteVm.RegisterSystemModuleCallables( m_ExampleBiteProgram.TypeRegistry );
         m_ExampleBiteVm.RegisterCallable( "UnityDeltaTime", new UnityDeltaTimeVmCallable() );
         

@@ -29,6 +29,7 @@
     <type fullname="UnityEngine.Sprite" preserve="all" />
     <type fullname="UnityEngine.RectTransform" preserve="all" />
     <type fullname="UnityEngine.LightProbes" preserve="all" />
+    <type fullname="UnityEngine.Random" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.AnimationClip" preserve="all" />
@@ -73,6 +74,10 @@
     <type fullname="UnityEngine.UI.Mask" preserve="all" />
     <type fullname="UnityEngine.UI.ScrollRect" preserve="all" />
     <type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="all" />
+  </assembly>
+  <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="CharacterManager" preserve="all" />
+    <type fullname="TowerManager" preserve="all" />
   </assembly>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="CharacterManager" preserve="all" />
